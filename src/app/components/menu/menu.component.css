@@ -1,0 +1,154 @@
+/*
+ * (non-doc)
+ * --------------------------------------------------------------------------
+ * general.css
+ * --------------------------------------------------------------------------
+ */
+.menu-wrapper {
+  padding-top: 20px;
+  height: 100%;
+  position: relative;
+  float: left;
+  z-index: 999;
+}
+.height100 {
+  height: 100%;
+  min-height: calc(100vh - 120px);
+}
+
+.isCollapsed {
+  width: 80px;
+}
+.isNotCollapsed {
+  width: 280px;
+}
+
+.btnCollapsed {
+  position: absolute;
+  left: 85px;
+}
+
+.btnNotCollapsed {
+  position: absolute;
+  left: 285px;
+}
+
+.title {
+  margin: 1rem;
+  margin-top: 2rem;
+  font-weight: 500;
+  font-size: 17px;
+}
+.menu-item-icon {
+  margin: 0px 10px 0px 0px;
+  width: 20px;
+  min-width: 14px;
+  font-size: 17px;
+  text-align: center;
+  transition: font-size 0.4s cubic-bezier(0.215, 0.61, 0.355, 1),
+    margin 0.4s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+.menu-item-legend {
+  text-decoration: none !important;
+}
+
+li {
+  margin: 0 !important;
+  margin-left: 4% !important;
+  width: 92% !important;
+  border-radius: 0.25rem !important;
+  transition: 0 !important;
+  cursor: pointer !important;
+}
+li[nz-menu-item] {
+  margin-top: 10px !important;
+}
+.ant-menu-item-selected:not(.lang-selected-item) {
+  background-color: #ffffffff !important;
+  box-shadow: none !important;
+  border-left: none !important;
+}
+.ant-menu-item-selected:not(.lang-selected-item) * {
+  color: #8e9da8 !important;
+  border-right: none !important;
+}
+.active-menu-item li {
+  background-color: #377dff19 !important;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2) !important;
+  border-left: 2px solid #377dff !important;
+}
+.active-menu-item li * {
+  color: #377dff !important;
+  border-right: none !important;
+}
+
+/*
+ * (non-doc)
+ * --------------------------------------------------------------------------
+ * profile.css
+ * --------------------------------------------------------------------------
+ */
+.profile-isCollapsed {
+  width: 60px !important;
+  min-width: 60px !important;
+  height: 60px !important;
+  min-height: 60px !important;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top right,
+    #f0f2f5,
+    white
+  ); /* Standard syntax (must be last) */
+  background: rgb(255, 255, 255);
+  object-fit: scale-down;
+}
+.profile-isNotCollapsed {
+  width: 110px !important;
+  min-width: 110px !important;
+  height: 110px !important;
+  min-height: 110px !important;
+  border-radius: 50%;
+  background-image: linear-gradient(
+    to top right,
+    #f0f2f5,
+    white
+  ); /* Standard syntax (must be last) */
+  background: rgb(255, 255, 255);
+}
+.profile-img {
+  width: 100% !important;
+  height: 100% !important;
+  border-radius: 50%;
+  object-fit: scale-down;
+}
+.profile-legend {
+  font-size: 16px;
+}
+
+.profile-img-isCollapsed {
+  margin-top: 17px;
+  font-size: 20px;
+}
+
+.profile-img-isNotCollapsed {
+  margin-top: 37px;
+  font-size: 40px;
+}
+
+/* This file is made to be compiled the last to override some .css */
+.ant-anchor-ink::before {
+  display: none !important;
+  width: 0px !important;
+}
+
+.ant-slider {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.ant-menu-inline .ant-menu-item::after,
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after {
+  border-right: none !important;
+}

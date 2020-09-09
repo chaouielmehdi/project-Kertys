@@ -1,0 +1,52 @@
+
+/*
+ * (non-doc)
+ * --------------------------------------------------------------------------
+ * general.css
+ * --------------------------------------------------------------------------
+ */
+
+.form-wrapper{
+	padding: 50px 35px 20px 35px;
+}
+
+.txt-size{
+	font-size: 17px;
+}
+
+.login-form {
+	width: 350px;
+}
+
+.login-form-forgot {
+	float: right;
+	text-decoration: underline !important;
+	text-decoration-color: #77838f;
+}
+
+.login-form-button {
+	width: 100%;
+}
+
+
+
+
+
+
+
+/*
+ * (non-doc)
+ * --------------------------------------------------------------------------
+ * media-queries.css
+ * --------------------------------------------------------------------------
+ */
+
+@media only screen and (min-width: 100px) and (max-width: 576px) {
+	.login-form {
+		width: 100%;
+	}
+	.form-wrapper{
+		padding: 0;
+		box-shadow: none !important;
+	}
+}

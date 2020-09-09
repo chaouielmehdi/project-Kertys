@@ -1,0 +1,34 @@
+.wrapper {
+  z-index: 999 !important;
+  height: 66px;
+  position: fixed;
+  width: 100%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  height: 66px;
+  background: white;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  margin-left: 65px !important;
+  margin-right: 65px !important;
+  height: 44px;
+  align-items: center;
+  list-style-type: none;
+}
+
+nav a {
+  color: #282f33;
+  font-size: 16px;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+nz-divider {
+  height: 30px;
+  margin-left: 31px !important;
+}

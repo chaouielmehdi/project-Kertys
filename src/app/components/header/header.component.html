@@ -1,0 +1,25 @@
+<div class="wrapper">
+  <nav class="d-flex align-items-center">
+    <ul class="d-flex justify-content-between" style="width: 100%">
+      <li class="d-flex justify-content-center">
+        <a routerLink="/">
+          <img width="150" src="assets/img/logo-Kertys.png" alt="logo" />
+        </a>
+      </li>
+
+      <li *ngIf="isUserConnected" class="transition">
+        <button
+          nz-button
+          nzType="dashed"
+          class="transition mr-3"
+          (click)="logout()"
+        >
+          <i nz-icon nzType="logout" nzTheme="outline"></i>
+          <span>Se déconnecter</span>
+        </button>
+        <!-- end menu items  -->
+      </li>
+      <!-- end connected dropdown -->
+    </ul>
+  </nav>
+</div>

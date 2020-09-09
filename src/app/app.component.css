@@ -1,0 +1,6 @@
+nz-content {
+  min-height: 90vh !important;
+  padding-top: 65px;
+  position: relative;
+  z-index: 1;
+}

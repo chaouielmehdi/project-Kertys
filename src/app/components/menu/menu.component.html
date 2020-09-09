@@ -1,0 +1,72 @@
+<div *ngIf="isUserConnected" class="menu-wrapper">
+  <button
+    nz-button
+    nzType="primary"
+    [class.btnCollapsed]="isCollapsed"
+    [class.btnNotCollapsed]="!isCollapsed"
+    (click)="toggleCollapsed()"
+  >
+    <i nz-icon [nzType]="isCollapsed ? 'menu-unfold' : 'menu-fold'"></i>
+  </button>
+  <ul
+    nz-menu
+    [nzMode]="'inline'"
+    [nzInlineCollapsed]="isCollapsed"
+    nzTheme="light"
+    class="mb-5 height100"
+    [class.isCollapsed]="isCollapsed"
+    [class.isNotCollapsed]="!isCollapsed"
+  >
+    <div class="d-flex justify-content-center align-items-center transition">
+      <a
+        routerLink="/"
+        class="box-sh-black box-sh-hover-grey transition d-flex justify-content-center align-items-center mb-2"
+        [class.profile-isCollapsed]="isCollapsed"
+        [class.profile-isNotCollapsed]="!isCollapsed"
+      >
+        <p
+          class="c-grey transition"
+          [class.profile-img-isCollapsed]="isCollapsed"
+          [class.profile-img-isNotCollapsed]="!isCollapsed"
+        >
+          {{ user?.username | slice: 0:2 | uppercase }}
+        </p>
+      </a>
+    </div>
+
+    <div class="position-relative mt-3">
+      <p *ngIf="!isCollapsed" class="title c-black">Services</p>
+      <hr class="m-3" />
+    </div>
+
+    <!-- menu items -->
+    <a
+      *ngFor="let item of menuItems"
+      class="transition c-grey c-hover-blue bg-hover-blue box-sh-hover-black"
+      routerLinkActive="active-menu-item"
+      [routerLinkActiveOptions]="{ exact: true }"
+      [routerLink]="item.route"
+    >
+      <li
+        nz-menu-item
+        nz-tooltip
+        nzPlacement="right"
+        [nzTitle]="isCollapsed ? 'Accueil' : ''"
+      >
+        <div class="menu-item">
+          <i
+            nz-icon
+            [nzType]="item.icon"
+            nzTheme="outline"
+            class="menu-item-icon"
+            [class.ml-2]="isCollapsed"
+          ></i>
+          <span *ngIf="!isCollapsed" class="menu-item-legend">{{
+            item.name
+          }}</span>
+        </div>
+      </li>
+    </a>
+    <!-- end menu items -->
+  </ul>
+</div>
